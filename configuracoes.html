@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroNiza - Configurações</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+        <h1>EletroNiza</h1>
+        <p>Gestão Inteligente de Laboratórios e Oficinas</p>
+
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Armários</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Devolução</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+            <p>Olá, Victor!</p>
+            <a href="#">Sair</a>
+        </header>
+
+
+        <!-- TÍTULO -->
+        <section>
+
+            <h1>Configurações</h1>
+
+            <p>
+                Personalize o sistema de acordo com as suas necessidades.
+            </p>
+
+        </section>
+
+
+        <!-- ABAS DE CONFIGURAÇÕES -->
+        <nav>
+
+            <ul>
+                <li><a href="#dados">Dados do Sistema</a></li>
+                <li><a href="#locacao">Locação</a></li>
+                <li><a href="#notificacoes">Notificações</a></li>
+                <li><a href="#interface">Interface</a></li>
+                <li><a href="#seguranca">Segurança</a></li>
+            </ul>
+
+        </nav>
+
+
+        <!-- DADOS DO SISTEMA -->
+        <section id="dados">
+
+            <h2>Dados do Sistema</h2>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="nome-sistema">Nome do Sistema *</label>
+
+                    <input type="text" id="nome-sistema"
+                           name="nome-sistema" value="EletroNiza" required>
+                </div>
+
+                <div>
+                    <label for="descricao">Descrição</label>
+
+                    <textarea id="descricao" name="descricao">Gestão inteligente de laboratórios e oficinas.</textarea>
+                </div>
+
+                <div>
+                    <label for="logo">Logotipo do Sistema</label>
+
+                    <input type="file" id="logo" name="logo"
+                           accept="image/*">
+
+                    <button type="button">Alterar Imagem</button>
+                    <button type="button">Remover</button>
+                </div>
+
+                <div>
+                    <label for="versao">Versão do Sistema</label>
+
+                    <input type="text" id="versao" name="versao"
+                           value="v1.0.0" readonly>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- PREFERÊNCIAS DE INTERFACE -->
+        <section id="interface">
+
+            <h2>Preferências de Interface</h2>
+
+            <div>
+                <label for="tema">Tema do Sistema</label>
+
+                <select id="tema" name="tema">
+                    <option value="roxo">Roxo (Padrão)</option>
+                    <option value="claro">Claro</option>
+                    <option value="escuro">Escuro</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="graficos">Exibir gráficos no painel</label>
+
+                <input type="checkbox" id="graficos"
+                       name="graficos" checked>
+            </div>
+
+        </section>
+
+
+        <!-- CONFIGURAÇÕES DE LOCAÇÃO -->
+        <section id="locacao">
+
+            <h2>Configurações de Locação</h2>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="prazo">Prazo Padrão de Devolução (dias) *</label>
+
+                    <input type="number" id="prazo" name="prazo"
+                           value="30" min="1" required>
+                </div>
+
+                <div>
+                    <label for="limite">Limite Máximo de Locações por Usuário *</label>
+
+                    <input type="number" id="limite" name="limite"
+                           value="5" min="1" required>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="renovacoes"
+                           name="renovacoes" checked>
+
+                    <label for="renovacoes">Permitir renovações de locação</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="justificativa"
+                           name="justificativa">
+
+                    <label for="justificativa">Exigir justificativa na locação</label>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- CONFIGURAÇÕES DE NOTIFICAÇÕES -->
+        <section id="notificacoes">
+
+            <h2>Configurações de Notificações</h2>
+
+            <div>
+                <input type="checkbox" id="pendentes"
+                       name="pendentes" checked>
+
+                <label for="pendentes">
+                    Notificar sobre devoluções pendentes
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="email"
+                       name="email" checked>
+
+                <label for="email">
+                    Enviar lembretes por e-mail
+                </label>
+            </div>
+
+            <div>
+                <label for="antecedencia">
+                    Dias de antecedência para lembrete:
+                </label>
+
+                <select id="antecedencia" name="antecedencia">
+                    <option value="1">1 dia</option>
+                    <option value="3" selected>3 dias</option>
+                    <option value="5">5 dias</option>
+                    <option value="7">7 dias</option>
+                </select>
+            </div>
+
+        </section>
+
+
+        <!-- SEGURANÇA -->
+        <section id="seguranca">
+
+            <h2>Segurança</h2>
+
+            <div>
+                <h3>Alterar Senha</h3>
+
+                <p>Atualize sua senha periodicamente.</p>
+
+                <button type="button">Alterar Senha</button>
+            </div>
+
+            <div>
+                <h3>Tempo de Expiração da Sessão</h3>
+
+                <p>Configure o tempo de inatividade permitido.</p>
+
+                <select id="sessao" name="sessao">
+                    <option value="1">1 hora</option>
+                    <option value="12">12 horas</option>
+                    <option value="24" selected>24 horas</option>
+                    <option value="48">48 horas</option>
+                </select>
+            </div>
+
+        </section>
+
+
+        <!-- BOTÕES FINAIS -->
+        <section>
+
+            <button type="reset">Restaurar Padrões</button>
+
+            <button type="submit">Salvar Configurações</button>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

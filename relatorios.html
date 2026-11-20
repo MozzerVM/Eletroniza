@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroNiza - Relatórios</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+        <h1>EletroNiza</h1>
+        <p>Gestão Inteligente de Laboratórios e Oficinas</p>
+
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Armários</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Devolução</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+            <p>Olá, Victor!</p>
+            <a href="#">Sair</a>
+        </header>
+
+
+        <!-- TÍTULO -->
+        <section>
+
+            <h1>Relatórios</h1>
+
+            <p>
+                Acompanhe os dados e indicadores de movimentação
+                do sistema.
+            </p>
+
+        </section>
+
+
+        <!-- INDICADORES -->
+        <section>
+
+            <article>
+                <h2>156</h2>
+                <p>Total de Ferramentas</p>
+            </article>
+
+            <article>
+                <h2>124</h2>
+                <p>Ferramentas Disponíveis</p>
+            </article>
+
+            <article>
+                <h2>18</h2>
+                <p>Locações Ativas</p>
+            </article>
+
+            <article>
+                <h2>7</h2>
+                <p>Devoluções Pendentes</p>
+            </article>
+
+        </section>
+
+
+        <!-- FILTROS DO RELATÓRIO -->
+        <section>
+
+            <form action="#" method="get">
+
+                <div>
+                    <label for="data-inicial">Período Inicial</label>
+
+                    <input type="date" id="data-inicial"
+                           name="data-inicial" value="2026-10-01">
+                </div>
+
+                <div>
+                    <label for="data-final">Período Final</label>
+
+                    <input type="date" id="data-final"
+                           name="data-final" value="2026-10-31">
+                </div>
+
+                <div>
+                    <label for="tipo-relatorio">Tipo de Relatório</label>
+
+                    <select id="tipo-relatorio" name="tipo-relatorio">
+                        <option value="todos">Todos</option>
+                        <option value="locacao">Locações</option>
+                        <option value="devolucao">Devoluções</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="usuario">Usuário Responsável</label>
+
+                    <select id="usuario" name="usuario">
+                        <option value="todos">Todos</option>
+                        <option value="lucas">Lucas Ferreira</option>
+                        <option value="ana">Ana Paula</option>
+                        <option value="diego">Diego Santos</option>
+                        <option value="mariana">Mariana Costa</option>
+                    </select>
+                </div>
+
+                <button type="submit">Gerar Relatório</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- GRÁFICOS -->
+        <section>
+
+            <article>
+
+                <h2>Locações e Devoluções por Mês</h2>
+
+                <p>Legenda: Locações e Devoluções</p>
+
+                <div>
+                    <p>Agosto/2026</p>
+                    <p>Locações: 18</p>
+                    <p>Devoluções: 15</p>
+                </div>
+
+                <div>
+                    <p>Setembro/2026</p>
+                    <p>Locações: 20</p>
+                    <p>Devoluções: 17</p>
+                </div>
+
+                <div>
+                    <p>Outubro/2026</p>
+                    <p>Locações: 22</p>
+                    <p>Devoluções: 19</p>
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <h2>Distribuição de Ferramentas por Categoria</h2>
+
+                <ul>
+                    <li>Manuais: 35%</li>
+                    <li>Elétricas: 22%</li>
+                    <li>Medição: 28%</li>
+                    <li>Outras: 15%</li>
+                </ul>
+
+            </article>
+
+
+            <article>
+
+                <h2>Movimentações ao Longo do Tempo</h2>
+
+                <p>Legenda: Locações e Devoluções</p>
+
+                <div>
+                    <h3>Semana 1</h3>
+                    <p>Locações: 12</p>
+                    <p>Devoluções: 10</p>
+                </div>
+
+                <div>
+                    <h3>Semana 2</h3>
+                    <p>Locações: 16</p>
+                    <p>Devoluções: 12</p>
+                </div>
+
+                <div>
+                    <h3>Semana 3</h3>
+                    <p>Locações: 20</p>
+                    <p>Devoluções: 14</p>
+                </div>
+
+                <div>
+                    <h3>Semana 4</h3>
+                    <p>Locações: 18</p>
+                    <p>Devoluções: 13</p>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- RELATÓRIO DE MOVIMENTAÇÕES RECENTES -->
+        <section>
+
+            <h2>Relatório de Movimentações Recentes</h2>
+
+            <div>
+                <button type="button">Exportar PDF</button>
+                <button type="button">Exportar Excel</button>
+            </div>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Usuário</th>
+                        <th>Ferramenta</th>
+                        <th>Tipo de Movimentação</th>
+                        <th>Quantidade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>28/10/2026 14:32</td>
+                        <td>Lucas Ferreira</td>
+                        <td>Chave de Fenda</td>
+                        <td>Locação</td>
+                        <td>1</td>
+                        <td>Ativa</td>
+                    </tr>
+
+                    <tr>
+                        <td>27/10/2026 16:10</td>
+                        <td>Ana Paula</td>
+                        <td>Alicate Universal</td>
+                        <td>Devolução</td>
+                        <td>1</td>
+                        <td>Concluída</td>
+                    </tr>
+
+                    <tr>
+                        <td>26/10/2026 09:45</td>
+                        <td>Diego Santos</td>
+                        <td>Martelo</td>
+                        <td>Locação</td>
+                        <td>1</td>
+                        <td>Ativa</td>
+                    </tr>
+
+                    <tr>
+                        <td>25/10/2026 11:20</td>
+                        <td>Mariana Costa</td>
+                        <td>Parafusadeira</td>
+                        <td>Devolução</td>
+                        <td>1</td>
+                        <td>Concluída</td>
+                    </tr>
+
+                    <tr>
+                        <td>24/10/2026 15:18</td>
+                        <td>Lucas Ferreira</td>
+                        <td>Trena</td>
+                        <td>Locação</td>
+                        <td>1</td>
+                        <td>Ativa</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

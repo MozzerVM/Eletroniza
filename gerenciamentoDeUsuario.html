@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroNiza - Gerenciamento de Usuários</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+        <h1>EletroNiza</h1>
+        <p>Gestão Inteligente de Laboratórios e Oficinas</p>
+
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Armários</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Devolução</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+            <p>Olá, Victor!</p>
+            <a href="#">Sair</a>
+        </header>
+
+
+        <!-- TÍTULO -->
+        <section>
+
+            <h1>Gerenciamento de Usuários</h1>
+
+            <p>
+                Cadastre, edite e gerencie os usuários do sistema.
+            </p>
+
+        </section>
+
+
+        <!-- INDICADORES -->
+        <section>
+
+            <article>
+                <h2>Total de Usuários</h2>
+                <p>24</p>
+            </article>
+
+            <article>
+                <h2>Usuários Ativos</h2>
+                <p>22</p>
+            </article>
+
+            <article>
+                <h2>Usuários Bloqueados</h2>
+                <p>2</p>
+            </article>
+
+            <article>
+                <h2>Administradores</h2>
+                <p>3</p>
+            </article>
+
+        </section>
+
+
+        <!-- CADASTRAR NOVO USUÁRIO -->
+        <section>
+
+            <h2>Cadastrar Novo Usuário</h2>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="nome">Nome Completo *</label>
+
+                    <input type="text" id="nome" name="nome"
+                           placeholder="Digite o nome completo..." required>
+                </div>
+
+                <div>
+                    <label for="email">E-mail *</label>
+
+                    <input type="email" id="email" name="email"
+                           placeholder="Digite o e-mail..." required>
+                </div>
+
+                <div>
+                    <label for="login">Login *</label>
+
+                    <input type="text" id="login" name="login"
+                           placeholder="Digite o login..." required>
+                </div>
+
+                <div>
+                    <label for="tipo">Tipo de Usuário *</label>
+
+                    <select id="tipo" name="tipo" required>
+                        <option value="operador">Operador</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="supervisor">Supervisor</option>
+                        <option value="aluno">Aluno</option>
+                        <option value="professor">Professor</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="status">Status</label>
+
+                    <select id="status" name="status">
+                        <option value="ativo">Ativo</option>
+                        <option value="bloqueado">Bloqueado</option>
+                    </select>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- LISTA DE USUÁRIOS -->
+        <section>
+
+            <h2>Lista de Usuários</h2>
+
+            <div>
+                <input type="search"
+                       placeholder="Pesquisar por nome, login ou e-mail...">
+
+                <button type="button">Filtrar</button>
+            </div>
+
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome Completo</th>
+                        <th>E-mail</th>
+                        <th>Login</th>
+                        <th>Tipo de Usuário</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>001</td>
+                        <td>Victor Silva</td>
+                        <td>victor@email.com</td>
+                        <td>victorvm</td>
+                        <td>Administrador</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Visualizar</button>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>Ana Paula Souza</td>
+                        <td>ana@email.com</td>
+                        <td>anapaula</td>
+                        <td>Operador</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Visualizar</button>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Lucas Ferreira</td>
+                        <td>lucas@email.com</td>
+                        <td>lucasf</td>
+                        <td>Operador</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Visualizar</button>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>004</td>
+                        <td>Mariana Costa</td>
+                        <td>mariana@email.com</td>
+                        <td>mariana</td>
+                        <td>Operador</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Visualizar</button>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>005</td>
+                        <td>Diego Santos</td>
+                        <td>diego@email.com</td>
+                        <td>diego_s</td>
+                        <td>Supervisor</td>
+                        <td>Bloqueado</td>
+                        <td>
+                            <button type="button">Visualizar</button>
+                            <button type="button">Editar</button>
+                            <button type="button">Desbloquear</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <!-- PAGINAÇÃO -->
+            <div>
+
+                <p>Mostrando 1 a 5 de 24 usuários</p>
+
+                <button type="button">Anterior</button>
+                <button type="button">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button">Próximo</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroNiza - Histórico de Movimentações</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+        <h1>EletroNiza</h1>
+        <p>Gestão Inteligente de Laboratórios e Oficinas</p>
+
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Armários</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Devolução</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+
+            <p>Olá, Victor!</p>
+
+            <a href="#">Sair</a>
+
+        </header>
+
+
+        <!-- TÍTULO -->
+        <section>
+
+            <h1>Histórico de Movimentações</h1>
+
+            <p>
+                Consulte todo o histórico de locações e devoluções
+                do sistema.
+            </p>
+
+        </section>
+
+
+        <!-- FILTROS DE BUSCA -->
+        <section>
+
+            <h2>Filtros de Busca</h2>
+
+            <form action="#" method="get">
+
+                <div>
+                    <label for="tipo">Tipo de Movimento</label>
+
+                    <select id="tipo" name="tipo">
+                        <option value="todos">Todos</option>
+                        <option value="locacao">Locação</option>
+                        <option value="devolucao">Devolução</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="usuario">Usuário</label>
+
+                    <select id="usuario" name="usuario">
+                        <option value="todos">Todos os usuários</option>
+                        <option value="lucas">Lucas Ferreira</option>
+                        <option value="ana">Ana Paula</option>
+                        <option value="diego">Diego Santos</option>
+                        <option value="mariana">Mariana Costa</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ferramenta">Ferramenta</label>
+
+                    <select id="ferramenta" name="ferramenta">
+                        <option value="todas">Todas as ferramentas</option>
+                        <option value="parafusadeira">Parafusadeira</option>
+                        <option value="chave">Chave de Fenda</option>
+                        <option value="martelo">Martelo</option>
+                        <option value="alicate">Alicate Universal</option>
+                        <option value="trena">Trena</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="periodo">Período</label>
+
+                    <select id="periodo" name="periodo">
+                        <option value="30">Últimos 30 dias</option>
+                        <option value="7">Últimos 7 dias</option>
+                        <option value="90">Últimos 90 dias</option>
+                        <option value="todos">Todo o período</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="data-inicial">Data Inicial</label>
+
+                    <input type="date" id="data-inicial"
+                           name="data-inicial" value="2026-10-01">
+                </div>
+
+                <div>
+                    <label for="data-final">Data Final</label>
+
+                    <input type="date" id="data-final"
+                           name="data-final" value="2026-10-31">
+                </div>
+
+                <button type="submit">Buscar Histórico</button>
+
+                <button type="reset">Limpar Filtros</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- MOVIMENTAÇÕES -->
+        <section>
+
+            <h2>Movimentações</h2>
+
+            <!-- BOTÕES DE EXPORTAÇÃO -->
+            <div>
+
+                <button type="button">Exportar Relatório</button>
+
+                <button type="button">Exportar Excel</button>
+
+            </div>
+
+
+            <!-- TABELA DE MOVIMENTAÇÕES -->
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Usuário Responsável</th>
+                        <th>Ferramenta</th>
+                        <th>Armário</th>
+                        <th>Quantidade</th>
+                        <th>Observações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>00125</td>
+                        <td>28/10/2026 14:32</td>
+                        <td>Locação</td>
+                        <td>Lucas Ferreira</td>
+                        <td>Parafusadeira</td>
+                        <td>Armário B1</td>
+                        <td>1</td>
+                        <td>Uso no laboratório</td>
+                    </tr>
+
+                    <tr>
+                        <td>00124</td>
+                        <td>27/10/2026 16:10</td>
+                        <td>Devolução</td>
+                        <td>Ana Paula</td>
+                        <td>Chave de Fenda</td>
+                        <td>Armário A1</td>
+                        <td>1</td>
+                        <td>Devolvida normalmente</td>
+                    </tr>
+
+                    <tr>
+                        <td>00123</td>
+                        <td>26/10/2026 09:45</td>
+                        <td>Locação</td>
+                        <td>Diego Santos</td>
+                        <td>Martelo</td>
+                        <td>Armário C1</td>
+                        <td>1</td>
+                        <td>Projeto da sala</td>
+                    </tr>
+
+                    <tr>
+                        <td>00122</td>
+                        <td>25/10/2026 11:20</td>
+                        <td>Devolução</td>
+                        <td>Mariana Costa</td>
+                        <td>Alicate Universal</td>
+                        <td>Armário B1</td>
+                        <td>1</td>
+                        <td>Sem observações</td>
+                    </tr>
+
+                    <tr>
+                        <td>00121</td>
+                        <td>24/10/2026 15:18</td>
+                        <td>Locação</td>
+                        <td>Lucas Ferreira</td>
+                        <td>Trena</td>
+                        <td>Armário C1</td>
+                        <td>1</td>
+                        <td>Obra do SENAI</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <!-- PAGINAÇÃO -->
+            <div>
+
+                <p>Mostrando 1 a 5 de 120 registros</p>
+
+                <button type="button">Anterior</button>
+
+                <button type="button">1</button>
+
+                <button type="button">2</button>
+
+                <button type="button">3</button>
+
+                <button type="button">4</button>
+
+                <button type="button">5</button>
+
+                <button type="button">Próximo</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

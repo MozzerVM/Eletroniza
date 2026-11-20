@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroNiza - Cadastro de Armários</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+        <h1>EletroNiza</h1>
+        <p>Controle Inteligente de Ferramentas</p>
+
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Armários</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Locações</a></li>
+                <li><a href="#">Devoluções</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+            <div>
+                <p>Prof. Silva</p>
+                <p>Professor/Chefe</p>
+            </div>
+        </header>
+
+
+        <!-- TÍTULO DA PÁGINA -->
+        <section>
+            <h1>Cadastro de Armários</h1>
+            <p>Gerencie os armários disponíveis no sistema</p>
+
+            <button type="button">+ Novo Armário</button>
+        </section>
+
+
+        <!-- INFORMAÇÕES DO ARMÁRIO -->
+        <section>
+
+            <h2>Informações do Armário</h2>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="numero">Número do Armário *</label>
+                    <input type="text" id="numero" name="numero"
+                           placeholder="Ex: A-01" required>
+                </div>
+
+                <div>
+                    <label for="localizacao">Localização *</label>
+
+                    <select id="localizacao" name="localizacao" required>
+                        <option value="">Selecione uma localização</option>
+                        <option value="laboratorio">Laboratório de Eletrotécnica</option>
+                        <option value="oficina">Oficina Mecânica</option>
+                        <option value="projetos">Sala de Projetos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="descricao">Descrição (opcional)</label>
+
+                    <textarea id="descricao" name="descricao"
+                              placeholder="Descreva o armário"></textarea>
+                </div>
+
+                <button type="submit">Salvar</button>
+                <button type="reset">Limpar</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ARMÁRIOS CADASTRADOS -->
+        <section>
+
+            <h2>Armários Cadastrados</h2>
+
+            <div>
+                <input type="search" placeholder="Buscar por número ou localização...">
+                <button type="button">Pesquisar</button>
+            </div>
+
+            <table border="1">
+
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Localização</th>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>A-01</td>
+                        <td>Laboratório de Eletrotécnica</td>
+                        <td>Armário principal</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>A-02</td>
+                        <td>Oficina Mecânica</td>
+                        <td>Ferramentas gerais</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>A-03</td>
+                        <td>Sala de Projetos</td>
+                        <td>Equipamentos diversos</td>
+                        <td>Ativo</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>A-04</td>
+                        <td>Laboratório de Eletrotécnica</td>
+                        <td>Componentes e Ferramentas</td>
+                        <td>Em Manutenção</td>
+                        <td>
+                            <button type="button">Editar</button>
+                            <button type="button">Excluir</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p>Total: 4 armários</p>
+
+            <div>
+                <button type="button">Anterior</button>
+                <button type="button">1</button>
+                <button type="button">2</button>
+                <button type="button">Próximo</button>
+            </div>
+
+        </section>
+
+
+        <!-- INFORMAÇÃO -->
+        <section>
+
+            <h2>Informação</h2>
+
+            <p>
+                Mantenha os dados atualizados para um controle
+                eficiente das ferramentas.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

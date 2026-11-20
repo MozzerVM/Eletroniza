@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroNiza - Devolução de Ferramentas</title>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside>
+
+        <h1>EletroNiza</h1>
+        <p>Gestão Inteligente de Laboratórios e Oficinas</p>
+
+        <nav>
+            <ul>
+                <li><a href="#">Painel Inicial</a></li>
+                <li><a href="#">Armários</a></li>
+                <li><a href="#">Ferramentas</a></li>
+                <li><a href="#">Locação</a></li>
+                <li><a href="#">Devolução</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Usuários</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- CABEÇALHO -->
+        <header>
+            <div>
+                <p>Olá, Victor!</p>
+            </div>
+
+            <div>
+                <a href="#">Sair</a>
+            </div>
+        </header>
+
+
+        <!-- TÍTULO DA PÁGINA -->
+        <section>
+
+            <h1>Devolução de Ferramentas</h1>
+
+            <p>Registre a devolução de ferramentas emprestadas.</p>
+
+        </section>
+
+
+        <!-- REGISTRAR DEVOLUÇÃO -->
+        <section>
+
+            <h2>Registrar Devolução</h2>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="codigo">Código da Locação *</label>
+
+                    <input type="text" id="codigo" name="codigo"
+                           placeholder="Digite o código da locação..." required>
+                </div>
+
+                <div>
+                    <label for="ferramenta">Ferramenta *</label>
+
+                    <select id="ferramenta" name="ferramenta" required>
+                        <option value="">Selecione a ferramenta</option>
+                        <option value="1">Chave de Fenda</option>
+                        <option value="2">Alicate Universal</option>
+                        <option value="3">Parafusadeira</option>
+                        <option value="4">Martelo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="usuario">Usuário Responsável</label>
+
+                    <input type="text" id="usuario" name="usuario"
+                           placeholder="Nome do usuário">
+                </div>
+
+                <div>
+                    <label for="quantidade">Quantidade Devolvida *</label>
+
+                    <input type="number" id="quantidade" name="quantidade"
+                           min="1" value="1" required>
+                </div>
+
+                <div>
+                    <label for="data">Data da Devolução</label>
+
+                    <input type="date" id="data" name="data">
+                </div>
+
+                <div>
+                    <label for="observacoes">Observações (opcional)</label>
+
+                    <textarea id="observacoes" name="observacoes"
+                              placeholder="Ex: Ferramenta em bom estado."></textarea>
+                </div>
+
+                <button type="submit">Confirmar Devolução</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- TABELAS DE DEVOLUÇÕES -->
+        <section>
+
+            <!-- DEVOLUÇÕES PENDENTES -->
+            <article>
+
+                <h2>Devoluções Pendentes</h2>
+
+                <table border="1">
+
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Usuário</th>
+                            <th>Ferramenta</th>
+                            <th>Quantidade</th>
+                            <th>Data</th>
+                            <th>Previsão</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>LCT-0048</td>
+                            <td>Ana Paula</td>
+                            <td>Alicate Universal</td>
+                            <td>1</td>
+                            <td>12/11/2026</td>
+                            <td>14/11/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+
+                        <tr>
+                            <td>LCT-0047</td>
+                            <td>Lucas Ferreira</td>
+                            <td>Parafusadeira</td>
+                            <td>1</td>
+                            <td>12/11/2026</td>
+                            <td>14/11/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+
+                        <tr>
+                            <td>LCT-0046</td>
+                            <td>Mariana Costa</td>
+                            <td>Martelo</td>
+                            <td>1</td>
+                            <td>11/11/2026</td>
+                            <td>13/11/2026</td>
+                            <td>Pendente</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p>Mostrando 1 a 3 de 3 registros</p>
+
+            </article>
+
+
+            <!-- ÚLTIMAS DEVOLUÇÕES -->
+            <article>
+
+                <h2>Últimas Devoluções</h2>
+
+                <table border="1">
+
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Usuário</th>
+                            <th>Ferramenta</th>
+                            <th>Quantidade</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>DEV-0045</td>
+                            <td>Diego Santos</td>
+                            <td>Chave de Fenda</td>
+                            <td>1</td>
+                            <td>11/11/2026</td>
+                        </tr>
+
+                        <tr>
+                            <td>DEV-0044</td>
+                            <td>Mariana Costa</td>
+                            <td>Alicate Universal</td>
+                            <td>1</td>
+                            <td>10/11/2026</td>
+                        </tr>
+
+                        <tr>
+                            <td>DEV-0043</td>
+                            <td>Lucas Ferreira</td>
+                            <td>Martelo</td>
+                            <td>1</td>
+                            <td>09/11/2026</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p>Mostrando 1 a 3 de 3 registros</p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
