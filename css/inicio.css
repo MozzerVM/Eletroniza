@@ -1,0 +1,471 @@
+
+/* ==========================================
+   ELET RONIZA - TELA DE LOGIN
+   Identidade visual T01
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: #F4EAFB;
+}
+
+/* ==========================================
+   ESTRUTURA PRINCIPAL
+========================================== */
+
+main {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* ==========================================
+   LADO ESQUERDO - IDENTIDADE ELET RONIZA
+========================================== */
+
+main > section:first-child {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 50px 35px;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(53, 16, 79, 0.82),
+            rgba(53, 16, 79, 0.91)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #29113D 0px,
+            #482064 40px,
+            #301446 80px
+        );
+
+    overflow: hidden;
+}
+
+/* Elementos decorativos da oficina */
+
+main > section:first-child::before {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 35px solid rgba(255,255,255,0.07);
+    border-radius: 50%;
+
+    top: -130px;
+    left: -130px;
+}
+
+main > section:first-child::after {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 25px solid rgba(242,201,76,0.12);
+    border-radius: 50%;
+
+    bottom: -100px;
+    right: -90px;
+}
+
+main > section:first-child h1 {
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: bold;
+    letter-spacing: -2px;
+
+    color: white;
+    margin-bottom: 22px;
+
+    text-shadow: 3px 4px 8px rgba(0,0,0,0.3);
+
+    z-index: 1;
+}
+
+main > section:first-child h1::first-letter {
+    color: #F2C94C;
+}
+
+main > section:first-child h2 {
+    max-width: 480px;
+    font-size: 23px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+    z-index: 1;
+}
+
+main > section:first-child p {
+    font-size: 16px;
+    color: #F2C94C;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+/* ==========================================
+   LADO DIREITO - LOGIN
+========================================== */
+
+main > section:nth-child(2) {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F4EAFB,
+            #FFFFFF,
+            #EEDDF9
+        );
+
+    position: relative;
+}
+
+/* Cartão visual do formulário */
+
+main > section:nth-child(2)::before {
+    content: "";
+    position: absolute;
+
+    width: 90%;
+    max-width: 600px;
+    height: 90%;
+
+    background: #FFFFFF;
+    border: 1px solid #E5D3F3;
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 35px rgba(75, 22, 120, 0.12);
+
+    z-index: 0;
+}
+
+/* Conteúdo acima do cartão */
+
+main > section:nth-child(2) > * {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 430px;
+}
+
+/* ==========================================
+   TÍTULO DO LOGIN
+========================================== */
+
+main > section:nth-child(2) > h2 {
+    color: #4B1678;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main > section:nth-child(2) > p:first-of-type {
+    color: #79658C;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+form {
+    width: 100%;
+}
+
+form > div {
+    margin-bottom: 22px;
+}
+
+form label {
+    display: block;
+    color: #3D2455;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    height: 49px;
+
+    padding: 0 16px;
+
+    border: 1.5px solid #DDC9EF;
+    border-radius: 10px;
+
+    background: #FFFFFF;
+
+    color: #35164F;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+form input::placeholder {
+    color: #A18EAF;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border-color: #7542A6;
+
+    box-shadow:
+        0 0 0 3px rgba(117, 66, 166, 0.12);
+}
+
+/* ==========================================
+   LEMBRAR-ME E ESQUECEU A SENHA
+========================================== */
+
+form > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+form > div:nth-child(3) input {
+    width: 17px;
+    height: 17px;
+    accent-color: #7542A6;
+    cursor: pointer;
+}
+
+form > div:nth-child(3) label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+form > div:nth-child(3) a {
+    margin-left: auto;
+    color: #7542A6;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form > div:nth-child(3) a:hover {
+    color: #4B1678;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   BOTÃO ENTRAR
+========================================== */
+
+form button[type="submit"] {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        100deg,
+        #4B1678,
+        #7542A6
+    );
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    box-shadow:
+        0 5px 12px rgba(75, 22, 120, 0.2);
+}
+
+form button[type="submit"]:hover {
+    background: #35104F;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   SEPARADOR OU
+========================================== */
+
+main > section:nth-child(2) > p:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #806B94;
+    font-size: 13px;
+    margin: 24px 0 15px;
+}
+
+main > section:nth-child(2) > p:nth-of-type(2)::before,
+main > section:nth-child(2) > p:nth-of-type(2)::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #E2D2EF;
+}
+
+/* ==========================================
+   SELEÇÃO DE PERFIL
+========================================== */
+
+main > section:nth-child(2) > h3 {
+    color: #654181;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+main > section:nth-child(2) > button {
+    width: 31.5%;
+    min-height: 65px;
+
+    display: inline-block;
+
+    background: #F5EBFC;
+    color: #4B1678;
+
+    border: 1px solid #E4D0F4;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    padding: 10px 5px;
+    margin: 0 1px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+main > section:nth-child(2) > button:hover {
+    background: #7542A6;
+    color: #FFFFFF;
+    border-color: #7542A6;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 12px rgba(75, 22, 120, 0.15);
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+main footer {
+    width: calc(100% + 110px);
+    max-width: 600px;
+
+    margin-top: 25px;
+    padding: 15px;
+
+    background: #EEDDF9;
+    border-radius: 0 0 20px 20px;
+
+    text-align: center;
+}
+
+main footer p {
+    color: #4B1678;
+    font-size: 12px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 900px) {
+
+    main {
+        grid-template-columns: 40% 60%;
+    }
+
+    main > section:nth-child(2) {
+        padding: 35px 25px;
+    }
+
+    main > section:nth-child(2)::before {
+        width: 94%;
+    }
+
+    main > section:nth-child(2) > button {
+        width: 31%;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main > section:first-child {
+        min-height: 260px;
+        padding: 35px 20px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 42px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 18px;
+    }
+
+    main > section:nth-child(2) {
+        min-height: 650px;
+        padding: 45px 25px;
+    }
+
+    main > section:nth-child(2)::before {
+        width: 92%;
+        height: 94%;
+    }
+
+    main > section:nth-child(2) > button {
+        width: 31%;
+        font-size: 10px;
+    }
+
+    main footer {
+        width: 100%;
+    }
+}
